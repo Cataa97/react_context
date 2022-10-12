@@ -1,14 +1,27 @@
 import { useState } from 'react';
 import UserContext from './context/UserContext';
-import InputName from './components/nombre/Index';
+import FormName from './components/formName/FormName';
+import FormAge from './components/formAge/FormAge';
+import Header from './components/header/Header';
+import Age from './components/age/Age';
+import FormImage from './components/formImage/FormImage';
+import Image from './components/imagesubmit/Image';
+
 
 
 function App() {
-  const [user, setName] = useState("");
-  const value = { user, setName };
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+  const [image, setImage] = useState('');
+  const user = { name, setName, age, setAge, image, setImage };
   return (
-    <UserContext.Provider value={value}>
-      <InputName />
+    <UserContext.Provider value={user}>
+      <Header />
+      <FormName />
+      <Age />
+      <FormAge />
+      <Image />
+      <FormImage />
     </UserContext.Provider>
   );
 }

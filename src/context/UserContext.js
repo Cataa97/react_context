@@ -1,7 +1,9 @@
 import { createContext } from "react";
 
 const UserContext = createContext({
-    name: ['', () => { }]
+    name: ['', () => { }],
+    age : [Number, () => { }],
+    image: [File, () => { }]
 });
 
 export default UserContext;
