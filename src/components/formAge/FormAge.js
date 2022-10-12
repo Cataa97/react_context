@@ -18,7 +18,7 @@ const FormAge = () => {
                 type="number"
                 id="age"
                 name="age"
-                placeholder="Edad"
+                placeholder="Age"
             />
 
             <button onClick={handleClick}>Enviar</button>

@@ -18,7 +18,7 @@ const FormName = () => {
         type="text"
         id="message"
         name="message"
-        placeholder="Nombre"
+        placeholder="Name"
       />
 
       <button onClick={handleClick}>Enviar</button>

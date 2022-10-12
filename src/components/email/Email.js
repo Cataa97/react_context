@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import UserContext from "../../context/UserContext";
-function Image() {
+function Email() {
   const context = useContext(UserContext);
   return (
     <div>
-      <img src={context.image || []} alt="hola" ></img>
+      <h2>tu email es: {context.email || []} </h2>
     </div>
   );
 
 }
 
-export default Image;
+export default Email;

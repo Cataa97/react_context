@@ -2,12 +2,12 @@ import { useRef } from 'react';
 import UserContext from '../../context/UserContext';
 import { useContext } from 'react';
 
-const Image = () => {
+const FormEmail = () => {
     const inputRef = useRef(null);
-    const { setImage } = useContext(UserContext);
+    const { setEmail } = useContext(UserContext);
 
     function handleClick() {
-        setImage(inputRef.current.value);
+        setEmail(inputRef.current.value);
     }
 
     return (
@@ -15,11 +15,10 @@ const Image = () => {
         <div>
             <input
                 ref={inputRef}
-                type="file"
-                id="photo"
-                name="photo"
-                alt="image"
-                
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email"
             />
 
             <button onClick={handleClick}>Enviar</button>
@@ -27,4 +26,4 @@ const Image = () => {
     );
 };
 
-export default Image;
+export default FormEmail;
